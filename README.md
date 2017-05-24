@@ -1,4 +1,4 @@
-# 🎲 👾 🕹 🎮
+# Mini Games
 
 An intro into game design, starting with javascript
 
