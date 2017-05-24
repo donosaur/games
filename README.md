@@ -9,7 +9,7 @@ As a user experience designer, I think games are a fun and exciting way to put m
 ## Goals
 
 #### Personal
-1. Create a site/portfolio of ~very~ basic games using javascript
+1. Create a site/portfolio of /~very/~ basic games using javascript
 2. Create a repository I can add new content as my skills improve, even after this class period ends
 3. Test the waters of game design
 
