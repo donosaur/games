@@ -30,4 +30,4 @@ As a user experience designer, I think games are a fun and exciting way to put m
 
 
 ## Gotchas
-1. This site is still ~very~ incomplete... but something I plan to develop further as my skills improve
+1. This site is still veryyy incomplete... but something I plan to develop further as my skills improve
