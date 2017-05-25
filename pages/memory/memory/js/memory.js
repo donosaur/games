@@ -1,22 +1,22 @@
 //--- GAME SET UP ---//
 // define an aray of cards
 var cards = [	"card-1",
-							"card-2",
-							"card-3",
-							"card-4",
-							"card-5",
-							"card-6",
-							"card-7",
-							"card-8",
-							"card-9",
-							"card-10",
-							"card-11",
-							"card-12"];
+		"card-2",
+		"card-3",
+		"card-4",
+		"card-5",
+		"card-6",
+		"card-7",
+		"card-8",
+		"card-9",
+		"card-10",
+		"card-11",
+		"card-12"];
 
 // copy card array, and make temp array to modify
 var temp_cards = cards.slice(0);
 
-// create a new array of cards, this will hold the cards we play with
+// create a new array of cards, this will hold the cards to play with
 var game_cards = [];
 
 // set the number of pairs (1/2 amount of playing cards)
@@ -64,6 +64,8 @@ console.log("GOTTA MATCH 'EM ALL! GOTTA MATCH 'EM ALL!")
 // console.log("Game Cards: " + game_cards);
 
 //--- Stephen Bae helped out with my code during Office Hours ---//
+//--- I decided to comment it out and try a different approach ---//
+
 // $(".box").click(function() {
 // 		$(this).addClass("flip");
 //
@@ -100,7 +102,7 @@ console.log("GOTTA MATCH 'EM ALL! GOTTA MATCH 'EM ALL!")
 // 		}
 // });
 
-//--- GAME LOGIC ---//
+//--- MY ATTEMPT, GAME LOGIC ---//
 var firstPick;
 var secondPick;
 
@@ -119,9 +121,9 @@ $(".box").click(function() {
 		secondPick = $(this);
 		// if the 'data-name' of the two picks match, add the class 'matched'
 		if (firstPick.attr("data-name") === secondPick.attr("data-name")) {
-			console.log("It's super effective!");
 			firstPick.addClass("matched")
 			secondPick.addClass("matched")
+			console.log("It's super effective!");
 			// add the two cards into the 'matched_cards' array
 			matched_cards.push($(firstPick));
 			matched_cards.push($(secondPick));
@@ -129,7 +131,6 @@ $(".box").click(function() {
 			winGame();
 			// if the picks don't match, flip the cards back over
 		} else {
-			console.log("It's not very effective..");
 			// delay the flip back to it's front state
 			var x = firstPick;
 			var y = secondPick;
@@ -137,6 +138,7 @@ $(".box").click(function() {
 				x.removeClass("flip");
 				y.removeClass("flip");
 			}, 1000);
+			console.log("It's not very effective..");
 		}
 		// clear the first and second pick, set equal to 'undefined'
 		firstPick = undefined;
@@ -151,6 +153,6 @@ function winGame() {
 	}
 }
 
-//--- GIPHY API ---//
+//--- GIPHY API, to replace Pokemon with GIPHY Stickers ---//
 var xhr = $.get("http://api.giphy.com/v1/stickers/random?api_key=dc6zaTOxFJmzC&tag=cats");
 xhr.done(function(data) { console.log("Success, got GIPHY data", data); });
